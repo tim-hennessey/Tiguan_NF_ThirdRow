@@ -10,7 +10,8 @@ app.Animation = (function () {
         txt1,
         hero,
         cta_arrow,
-        cta_txt;
+        cta_txt,
+        vignette;
 
     // --------------------------------------------------------------------------------------
     // set default properties
@@ -24,6 +25,7 @@ app.Animation = (function () {
         hero = document.getElementById('hero');
         cta_arrow = document.getElementById('cta_arrow');
         cta_txt = document.getElementById('cta_txt');
+        vignette = document.getElementById('vignette');
 
         buttonExit.addEventListener('mouseover', function () {
             TweenMax.to(cta_arrow, .25, {x: 5, ease: Sine.easeOut});
@@ -38,11 +40,12 @@ app.Animation = (function () {
         tl.to(curtain, .5, {opacity: 0})
             .to(tig1, 3, {scale: 1, ease: Sine.easeOut}, "-=.5")
             .to(txt1, 1, {opacity: 1}, "-=1")
+            .to(vignette, 1, {opacity: 1}, "-=1")
             .to(txt1, .5, {opacity: 0}, "+=3")
             .to(txt2, .5, {opacity: 1})
             .to(hero, 1, {opacity: 1}, "+=3")
             .to(cta_txt, .5, {opacity: 1})
-            .to(cta_arrow, .5, {opacity: 1}, "-=.5")
+            .to(cta_arrow, .5, {opacity: 1}, "-=.5");
     }
 
 
