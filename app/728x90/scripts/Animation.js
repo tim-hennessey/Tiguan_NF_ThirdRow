@@ -38,9 +38,9 @@ app.Animation = (function () {
     // Starts the animation
     function start() {
         tl.to(curtain, .5, {opacity: 0})
-            .to(tig1, 3, {scale: 1, x:"+=40", ease: Sine.easeOut}, "-=.5")
+            .to(tig1, 3, {scale: 1, x:"+=40", y:"+=30", ease: Sine.easeOut}, "-=.5")
             .to(txt1, 1, {opacity: 1}, "-=1")
-            .to(vignette, 1, {opacity: 1}, "-=1")
+            // .to(vignette, 1, {opacity: 1}, "-=1")
             .to(txt1, .5, {opacity: 0}, "+=3")
             .to(txt2, .5, {opacity: 1})
             .to(hero, 1, {opacity: 1}, "+=3")
